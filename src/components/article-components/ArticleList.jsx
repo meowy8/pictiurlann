@@ -6,7 +6,7 @@ const ArticlesList = () => {
   return (
     <section className="w-full">
       <PageHeading>Articles</PageHeading>
-      <ul className="py-4">
+      <ul className="p-4">
         <li className="list-disc">
           <Link to={'/article'}>Article Title</Link>
         </li>
