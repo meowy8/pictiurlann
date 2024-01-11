@@ -1,6 +1,6 @@
 const MainContainer = ({ children }) => {
   return (
-    <div className="flex">
+    <div className="flex p-2">
       {children}
     </div>
   )
