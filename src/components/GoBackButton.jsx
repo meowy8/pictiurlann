@@ -4,7 +4,7 @@ const GoBackButton = () => {
   const navigate = useNavigate()
 
   return (
-    <button onClick={() => navigate(-1)}>Go Back</button>
+    <button onClick={() => navigate(-1)} className='text-sm py-2'>Go Back</button>
   )
 }
 
