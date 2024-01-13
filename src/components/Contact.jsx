@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm"
 import PageHeading from "./PageHeading"
 
 const Contact = () => {
@@ -23,6 +24,7 @@ const Contact = () => {
           </span>
         </div>
       </div>
+      <ContactForm />
     </section>
   )
 }
