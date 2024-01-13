@@ -1,7 +1,7 @@
-const ArticleMain = ({ children }) => {
+const ArticleMain = ({ mainText }) => {
   return (
     <div id="article-main">
-      <p>{children}</p>
+      <p>{mainText}</p>
     </div>
   )
 }

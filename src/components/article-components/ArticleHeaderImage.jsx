@@ -1,7 +1,7 @@
-const ArticleHeaderImage = () => {
+const ArticleHeaderImage = ({ src }) => {
   return (
     <div id="img-container">
-      <img src="/media/Novelists-Film-Header.webp" alt="" />
+      <img src={src} alt="" />
     </div>
   )
 }

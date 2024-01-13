@@ -6,6 +6,7 @@ import ArticlePreviewCard from "./ArticlePreviewCard"
 const ArticlesList = () => {
   const articleData = [
     { title: 'Cinematic Poetry: Unraveling the Subtle Brilliance of Hong Sang-soo',
+      id: 1,
       author: 'John Doe',
       preface: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada justo nec quam fermentum, ac laoreet urna euismod. Vestibulum at leo vel libero malesuada feugiat. Aliquam erat volutpat.',
       src: '/media/Novelists-Film-Header.webp',
@@ -13,6 +14,7 @@ const ArticlesList = () => {
       published: '13/01/24'
     },
     { title: 'Between the Lines: Jean-Luc Godard\'s Art of Subtext in Cinema',
+      id: 2,
       author: 'Mary Jane',
       preface: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada justo nec quam fermentum, ac laoreet urna euismod. Vestibulum at leo vel libero malesuada feugiat. Aliquam erat volutpat.',
       src: '/media/Vivre-Sa-Vie-Header.jpg',
@@ -20,6 +22,7 @@ const ArticlesList = () => {
       published: '13/01/99'
     },
     { title: 'Michelangelo Antonioni\'s Landscapes of Emptiness: Unraveling the Aesthetics of Alienation',
+      id: 3,
       author: 'John Doe',
       preface: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada justo nec quam fermentum, ac laoreet urna euismod. Vestibulum at leo vel libero malesuada feugiat. Aliquam erat volutpat.',
       src: '/media/Red-Desert-Header.jpeg',
@@ -34,9 +37,11 @@ const ArticlesList = () => {
       <ArticleSearch />
       <ul className="flex flex-col gap-4">
         {articleData.map(article => {
-          <li>
+          return (
+          <li key={article.id}>
             <ArticlePreviewCard 
               title={article.title}
+              id={article.id}
               author={article.author}
               preface={article.preface}
               src={article.src}
@@ -44,6 +49,7 @@ const ArticlesList = () => {
               published={article.published}
             />
           </li>
+          )
         })}
       </ul>
       <Outlet />

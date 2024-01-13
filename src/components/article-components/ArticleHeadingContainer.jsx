@@ -1,11 +1,11 @@
 import GoBackButton from '../GoBackButton'
 
-const ArticleHeadingContainer = () => {
+const ArticleHeadingContainer = ({ title, author }) => {
   return (
     <div id="article-header">
       <GoBackButton />
-      <h1 className=" text-4xl">Article Title</h1>
-      <span className="text-md">author</span>
+      <h1 className=" text-4xl">{title}</h1>
+      <span className="text-md">{author}</span>
     </div>
   )
 }
