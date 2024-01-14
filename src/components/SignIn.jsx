@@ -1,10 +1,13 @@
 import PageHeading from "./PageHeading"
+import { useAuth } from "./AuthProvider"
 
 const SignIn = () => {
+  const { signIn } = useAuth()
+
   return (
     <section className="w-full">
       <PageHeading>Sign In</PageHeading>
-      <div className="flex flex-col gap-4 py-8">
+      <form className="flex flex-col gap-4 py-8">
         <label htmlFor="username">
           Username:
           <input type="text" className="text-black"/>
@@ -13,7 +16,7 @@ const SignIn = () => {
           Password:
           <input type="password" className="text-black"/>
         </label>
-      </div>
+      </form>
     </section>
   )
 }
