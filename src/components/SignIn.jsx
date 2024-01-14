@@ -7,7 +7,7 @@ const SignIn = () => {
   return (
     <section className="w-full">
       <PageHeading>Sign In</PageHeading>
-      <form className="flex flex-col gap-4 py-8">
+      <form type="submit" className="flex flex-col gap-4 py-8">
         <label htmlFor="username">
           Username:
           <input type="text" className="text-black"/>
@@ -16,6 +16,7 @@ const SignIn = () => {
           Password:
           <input type="password" className="text-black"/>
         </label>
+        <button type="submit">Sign In</button>
       </form>
     </section>
   )
