@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom"
 import PageHeading from "../PageHeading"
 import ArticleSearch from "./ArticleSearch"
 import ArticlePreviewCard from "./ArticlePreviewCard"
@@ -32,7 +31,9 @@ const ArticlesList = () => {
     }
   ]
   
+  const [ search, setSearch ] = useState('')
   const [ articlesOrder, setArticlesOrder ] = useState(articleData)
+  const [ filteredList, setFilteredList ] = useState([])
 
   const handleSortAsc = (selection) => {
     if (selection === 'asc') {
@@ -44,12 +45,20 @@ const ArticlesList = () => {
     }
   }
 
+  const handleSearch = (searchValue) => {
+    const newList = articleData.filter(article => {
+      return search.toLowerCase() === '' ? article : article.title.toLowerCase().includes(search)
+    })
+    setFilteredList(newList)
+    console.log(searchValue)
+  }
+
   return (
     <section className="w-full">
       <PageHeading>Articles</PageHeading>
-      <ArticleSearch handleSortAsc={handleSortAsc}/>
+      <ArticleSearch search={search} setSearch={setSearch} handleSearch={handleSearch} handleSortAsc={handleSortAsc}/>
       <ul className="flex flex-col gap-4">
-        {articlesOrder.map(article => {
+        {filteredList.map(article => {
           return (
           <li key={article.id}>
             <ArticlePreviewCard 
@@ -65,7 +74,6 @@ const ArticlesList = () => {
           )
         })}
       </ul>
-      <Outlet />
     </section>
   )
 }
