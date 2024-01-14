@@ -13,8 +13,13 @@ const ArticlePreviewCard = (articleData) => {
         <div className=" overflow-hidden">
           <img src={articleData.src} alt="" className="flex min-w-48"/>
         </div>
-        <div className="flex justify-center p-2 bg-black">
-          <span className="text-lg">{articleData.title}</span>
+        <div className="flex flex-col bg-black p-2">
+          <div className="">
+            <span className="text-lg">{articleData.title}</span>
+          </div>
+          <div>
+            <span className="text-sm">{articleData.published}</span>
+          </div>
         </div>
       </div>
     </Link>

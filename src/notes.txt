@@ -1,0 +1,4 @@
+priority:
+- implement a search feature for the articles list
+
+- learn how to properly use links and grab data so that if you type in the url of an article it take you to the same page as clicking the link to the article
