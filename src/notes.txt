@@ -1,5 +1,6 @@
 priority:
-- implement a search feature for the articles list
+- create sign in feature so that when you sign in you can access your saved articles on the front page
+- add save button to both preview cards and each article that saves the article to the front page
 
 
 fixes:
