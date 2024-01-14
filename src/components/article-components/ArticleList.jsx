@@ -32,16 +32,15 @@ const ArticlesList = () => {
   ]
   
   const [ search, setSearch ] = useState('')
-  const [ articlesOrder, setArticlesOrder ] = useState(articleData)
-  const [ filteredList, setFilteredList ] = useState([])
+  const [ filteredList, setFilteredList ] = useState(articleData)
 
   const handleSortAsc = (selection) => {
     if (selection === 'asc') {
-      const ascArticles = [...articleData].sort((a,b) => new Date(a.published) - new Date(b.published))
-      setArticlesOrder(ascArticles)
+      const ascArticles = [...filteredList].sort((a,b) => new Date(a.published) - new Date(b.published))
+      setFilteredList(ascArticles)
     } else if (selection === 'desc') {
-      const descArticles = [...articleData].sort((a,b) => new Date(b.published) - new Date(a.published))
-      setArticlesOrder(descArticles)
+      const descArticles = [...filteredList].sort((a,b) => new Date(b.published) - new Date(a.published))
+      setFilteredList(descArticles)
     }
   }
 

@@ -1,7 +1,10 @@
+import { useState } from "react"
 import ContactForm from "./ContactForm"
 import PageHeading from "./PageHeading"
 
 const Contact = () => {
+  const [ formStatus, setFormStatus ] = useState('')
+
   return (
     <section className="w-full">
       <PageHeading>Contact Info</PageHeading>
@@ -24,7 +27,12 @@ const Contact = () => {
           </span>
         </div>
       </div>
-      <ContactForm />
+      {!formStatus && <ContactForm setFormStatus={setFormStatus}/>}
+      {formStatus && 
+        <div>
+          <p>Message Submitted!</p>
+        </div>
+      }
     </section>
   )
 }

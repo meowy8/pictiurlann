@@ -1,6 +1,6 @@
-const ContactForm = () => {
+const ContactForm = ({ setFormStatus }) => {
   return (
-    <form action="submit" className="flex flex-col w-full">
+    <form action="submit" onSubmit={() => setFormStatus('submitted')} className="flex flex-col w-full">
       <label htmlFor="" className="flex flex-col">
         Name:
         <input type="text" placeholder="Enter full name here" className="text-black"/>
