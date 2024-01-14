@@ -1,13 +1,21 @@
 import PageHeading from "./PageHeading"
 import { useAuth } from "./AuthProvider"
+import { useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
   const { signIn } = useAuth()
+  const navigateTo = useNavigate()
+
+  const handleSignIn = (e) => {
+    e.preventDefault()
+    signIn()
+    navigateTo('/')
+  }
 
   return (
     <section className="w-full">
       <PageHeading>Sign In</PageHeading>
-      <form type="submit" className="flex flex-col gap-4 py-8">
+      <form type="submit" onSubmit={(e) => handleSignIn(e)} className="flex flex-col gap-4 py-8">
         <label htmlFor="username">
           Username:
           <input type="text" className="text-black"/>
@@ -16,7 +24,7 @@ const SignIn = () => {
           Password:
           <input type="password" className="text-black"/>
         </label>
-        <button type="submit">Sign In</button>
+        <button>Sign In</button>
       </form>
     </section>
   )

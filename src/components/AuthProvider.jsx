@@ -9,8 +9,12 @@ export const AuthProvider = ({ children }) => {
     setAuth(true)
   }
 
+  const signOut = () => [
+    setAuth(false)
+  ]
+
   return (
-    <AuthContext.Provider value={{ isAuth, signIn }}>
+    <AuthContext.Provider value={{ isAuth, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   )

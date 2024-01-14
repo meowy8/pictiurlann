@@ -2,7 +2,7 @@ import BodyContainer from "./components/BodyContainer"
 import NavBar from "./components/NavBar"
 import MainContainer from "./components/MainContainer"
 import { Outlet } from "react-router-dom"
-import AuthProvider from "./components/AuthProvider"
+import { AuthProvider } from "./components/AuthProvider"
 
 function App() {
 
