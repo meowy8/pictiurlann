@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar"
 import MainContainer from "./components/MainContainer"
 import { Outlet } from "react-router-dom"
 import { AuthProvider } from "./components/AuthProvider"
+import { SavedArticlesProvider } from "./components/SavedArticlesContext"
 
 function App() {
 
@@ -12,9 +13,11 @@ function App() {
       <AuthProvider>
         <BodyContainer>
           <NavBar />
-          <MainContainer>
-            <Outlet />
-          </MainContainer>
+          <SavedArticlesProvider>
+            <MainContainer>
+              <Outlet />
+            </MainContainer>
+          </SavedArticlesProvider>
         </BodyContainer>
       </AuthProvider>
     </div>

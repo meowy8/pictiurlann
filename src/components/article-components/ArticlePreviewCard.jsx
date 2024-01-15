@@ -19,7 +19,6 @@ const ArticlePreviewCard = (articleData) => {
           </div>
           <div className="flex justify-between">
             <span className="text-sm">{articleData.published}</span>
-            <button>Save</button>
           </div>
         </div>
       </div>
