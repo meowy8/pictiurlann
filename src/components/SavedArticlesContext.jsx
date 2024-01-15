@@ -11,7 +11,7 @@ export const SavedArticlesProvider = ({ children }) => {
 }
 
   return (
-    <SavedArticlesContext.Provider value={{ savedArticles, saveArticle}}>
+    <SavedArticlesContext.Provider value={{ savedArticles, saveArticle }}>
       {children}
     </SavedArticlesContext.Provider>
   )

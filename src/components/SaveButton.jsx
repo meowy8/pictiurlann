@@ -5,7 +5,7 @@ const SaveButton = ({ id, src, title, published, preface, mainText, author }) =>
 
 
   const handleClick = () => {
-    saveArticle({ title, src, id, published })
+    saveArticle({ title, src, id, published, preface, mainText, author })
   }
 
   return (

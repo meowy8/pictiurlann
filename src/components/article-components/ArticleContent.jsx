@@ -7,12 +7,19 @@ import ArticlePreface from "./ArticlePreface"
 
 const ArticleContent = () => {
   const location = useLocation()
-  const { src, title, published, preface, author, mainText } = location.state || {}
+  const { src, title, published, preface, author, mainText, id } = location.state || {}
 
 
   return (
     <div className="flex flex-col gap-3 bg-[#5e2424] p-4">
-      <ArticleHeadingContainer title={title} author={author}/>
+      <ArticleHeadingContainer
+        title={title}
+        author={author}
+        id={id}
+        src={src}
+        published={published}
+        mainText={mainText}
+        preface={preface}/>
       <ArticlePreface preface={preface}/>
       <ArticleHeaderImage src={src}/>
       <ArticleMain mainText={mainText}/>
