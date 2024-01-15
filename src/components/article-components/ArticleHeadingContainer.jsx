@@ -1,12 +1,17 @@
 import GoBackButton from '../GoBackButton'
 import SaveButton from '../SaveButton'
 
-const ArticleHeadingContainer = ({ title, author }) => {
+const ArticleHeadingContainer = ({ id, src, title, published, preface, mainText, author }) => {
   return (
     <div id="article-header">
       <div className='flex justify-between'>
         <GoBackButton />
-        <SaveButton />
+        <SaveButton 
+          id={id}
+          src={src}
+          published={published}
+          title={title}
+        />
       </div>
       <h1 className=" text-4xl">{title}</h1>
       <span className="text-md">{author}</span>

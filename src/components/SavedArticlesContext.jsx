@@ -5,9 +5,10 @@ const SavedArticlesContext = createContext()
 export const SavedArticlesProvider = ({ children }) => {
   const [ savedArticles, setSavedArticles ] = useState([])
 
-  const saveArticle = (article) => [
+  const saveArticle = (article) => {
     setSavedArticles([...savedArticles, article])
-  ]
+    console.log(savedArticles)
+}
 
   return (
     <SavedArticlesContext.Provider value={{ savedArticles, saveArticle}}>
