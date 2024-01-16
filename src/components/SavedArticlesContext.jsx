@@ -6,7 +6,9 @@ export const SavedArticlesProvider = ({ children }) => {
   const [ savedArticles, setSavedArticles ] = useState([])
 
   const saveArticle = (article) => {
-    setSavedArticles([...savedArticles, article])
+    if (!savedArticles.some(data => data.id === article.id)) {
+      setSavedArticles([...savedArticles, article])
+    }
     console.log(savedArticles)
 }
 
