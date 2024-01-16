@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import ArticleFooter from "./ArticleFooter"
 import ArticleHeaderImage from "./ArticleHeaderImage"
 import ArticleHeadingContainer from "./ArticleHeadingContainer"
@@ -9,8 +9,6 @@ import { useEffect, useState } from "react"
 const ArticleContent = () => {
   const [ articleContentData, setArticleContentData ] = useState(null)
   const [ currentArticle, setCurrentArticle ] = useState(null)
-  const location = useLocation()
-  const { src, title, published, preface, author, mainText, } = location.state || {}
   const { id } = useParams()
   console.log('id from params: ' + id)
 

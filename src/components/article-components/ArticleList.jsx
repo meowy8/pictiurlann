@@ -23,9 +23,6 @@ const ArticlesList = () => {
     })
   }, [])
 
-  
-
-
   const handleSortAsc = (selection) => {
     if (selection === 'asc') {
       const ascArticles = [...filteredList].sort((a,b) => new Date(a.published) - new Date(b.published))

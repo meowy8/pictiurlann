@@ -24,6 +24,7 @@ const SavedArticles = () => {
                 mainText={article.mainText}
                 preface={article.preface}
                 author={article.author}
+                id={article.id}
               /> 
             </li>
         )})
