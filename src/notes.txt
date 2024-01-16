@@ -1,5 +1,5 @@
 priority:
-- add save button to both preview cards and each article that saves the article to the front page
+- use useParams to fecth data using the id that is in the url for the article
 
 
 fixes:
