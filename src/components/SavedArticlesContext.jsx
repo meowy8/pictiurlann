@@ -10,10 +10,15 @@ export const SavedArticlesProvider = ({ children }) => {
       setSavedArticles([...savedArticles, article])
     }
     console.log(savedArticles)
-}
+  }
+
+  const unsaveArticle = (id) => {
+    const newList = savedArticles.filter(data => data.id !== id)
+    setSavedArticles(newList)
+  }
 
   return (
-    <SavedArticlesContext.Provider value={{ savedArticles, saveArticle }}>
+    <SavedArticlesContext.Provider value={{ savedArticles, saveArticle, unsaveArticle }}>
       {children}
     </SavedArticlesContext.Provider>
   )
