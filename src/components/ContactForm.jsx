@@ -1,17 +1,19 @@
+import PropTypes from 'prop-types'
+
 const ContactForm = ({ setFormStatus }) => {
   return (
     <form action="submit" onSubmit={() => setFormStatus('submitted')} className="flex flex-col w-full">
-      <label htmlFor="" className="flex flex-col">
+      <label htmlFor="name" className="flex flex-col">
         Name:
-        <input type="text" placeholder="Enter full name here" className="text-black"/>
+        <input type="text" id="name" placeholder="Enter full name here" className="text-black"/>
       </label>
-      <label htmlFor="" className="flex flex-col">
+      <label htmlFor="email" className="flex flex-col">
         Email:
-        <input type="text" placeholder="Enter email here" className="text-black"/>
+        <input type="text" id="email" placeholder="Enter email here" className="text-black"/>
       </label>
-      <label htmlFor="" className="flex flex-col">
+      <label htmlFor="message" className="flex flex-col">
         Message:
-        <input type="text" className=" flex resize h-32 text-black" placeholder="Enter your message here"/>
+        <input type="text" id="message" className=" flex resize h-32 text-black" placeholder="Enter your message here"/>
       </label>
       <button type="submit" className="flex underline py-4">Submit</button>
     </form>
@@ -19,3 +21,7 @@ const ContactForm = ({ setFormStatus }) => {
 }
 
 export default ContactForm
+
+ContactForm.propTypes = {
+  setFormStatus: PropTypes.func
+}

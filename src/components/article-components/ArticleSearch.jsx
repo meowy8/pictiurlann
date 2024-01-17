@@ -9,7 +9,7 @@ const ArticleSearch = ({ search, setSearch, handleSearch, handleSortAsc }) => {
 
   return (
     <div className="flex justify-center items-center">
-      <input type="text" placeholder="Search for article" value={search} onChange={handleInputChange} className="w-full m-4 text-black rounded-md md:w-96"/>
+      <input type="text" id="search" placeholder="Search for article" value={search} onChange={handleInputChange} className="w-full m-4 text-black rounded-md md:w-96"/>
       <select onChange={(e) => handleSortAsc(e.target.value)} name="Sort" id="sort-list" className="text-slate-500 h-full w-24 rounded-md">
         <option value="default">Sort by</option>
         <option value="asc">Publish Date (Asc)</option>

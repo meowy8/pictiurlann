@@ -18,11 +18,11 @@ const SignIn = () => {
       <form type="submit" onSubmit={(e) => handleSignIn(e)} className="flex flex-col gap-4 py-8">
         <label htmlFor="username">
           Username:
-          <input type="text" value="user123" readOnly className="text-black"/>
+          <input type="text" id="username" value="user123" readOnly className="text-black"/>
         </label>
         <label htmlFor="password">
           Password:
-          <input type="password" value="vd6vc6s7v6cs7" readOnly className="text-black"/>
+          <input type="password" id="password" value="vd6vc6s7v6cs7" readOnly className="text-black"/>
         </label>
         <button>Sign In</button>
       </form>
