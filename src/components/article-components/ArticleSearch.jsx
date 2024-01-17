@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const ArticleSearch = ({ search, setSearch, handleSearch, handleSortAsc }) => {
   const handleInputChange = (e) => {
     const value = e.target.value
@@ -18,3 +20,10 @@ const ArticleSearch = ({ search, setSearch, handleSearch, handleSortAsc }) => {
 }
 
 export default ArticleSearch
+
+ArticleSearch.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+  handleSearch: PropTypes.func,
+  handleSortAsc: PropTypes.func
+}

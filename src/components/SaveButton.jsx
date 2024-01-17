@@ -1,4 +1,5 @@
 import { useSavedArticles } from "./SavedArticlesContext"
+import PropTypes from 'prop-types'
 
 const SaveButton = ({ id, src, title, published, preface, mainText, author }) => {
   const { saveArticle } = useSavedArticles()
@@ -14,3 +15,13 @@ const SaveButton = ({ id, src, title, published, preface, mainText, author }) =>
 }
 
 export default SaveButton
+
+SaveButton.propTypes = {
+  id: PropTypes.number,
+  src: PropTypes.string,
+  title: PropTypes.string,
+  published: PropTypes.string,
+  author: PropTypes.string,
+  preface: PropTypes.string,
+  mainText: PropTypes.string
+}

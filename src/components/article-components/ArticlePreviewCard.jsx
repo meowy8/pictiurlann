@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 
 
 const ArticlePreviewCard = ({ id, src, title, published }) => {
@@ -24,3 +25,10 @@ const ArticlePreviewCard = ({ id, src, title, published }) => {
 }
 
 export default ArticlePreviewCard
+
+ArticlePreviewCard.propTypes = {
+  id: PropTypes.number,
+  src: PropTypes.string,
+  title: PropTypes.string,
+  published: PropTypes.string,
+}

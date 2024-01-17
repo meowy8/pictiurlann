@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const MainContainer = ({ children }) => {
 
   return (
@@ -8,3 +10,7 @@ const MainContainer = ({ children }) => {
 }
 
 export default MainContainer
+
+MainContainer.propTypes = {
+  children: PropTypes.object
+}

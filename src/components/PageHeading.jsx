@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const PageHeading = ({ children }) => {
   const texture = 'media/bank-note.svg'
 
@@ -13,3 +15,7 @@ const PageHeading = ({ children }) => {
 }
 
 export default PageHeading
+
+PageHeading.propTypes = {
+  children: PropTypes.string
+}

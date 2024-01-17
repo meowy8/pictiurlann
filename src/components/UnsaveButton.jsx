@@ -1,4 +1,5 @@
 import { useSavedArticles } from "./SavedArticlesContext"
+import PropTypes from 'prop-types'
 
 const UnsaveButton = ({ id }) => {
   const { unsaveArticle } = useSavedArticles()
@@ -13,3 +14,7 @@ const UnsaveButton = ({ id }) => {
 }
 
 export default UnsaveButton
+
+UnsaveButton.propTypes = {
+  id: PropTypes.number
+}

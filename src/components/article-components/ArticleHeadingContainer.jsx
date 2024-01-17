@@ -2,8 +2,9 @@ import GoBackButton from '../GoBackButton'
 import SaveButton from '../SaveButton'
 import { useSavedArticles } from '../SavedArticlesContext'
 import UnsaveButton from '../UnsaveButton'
+import PropTypes from 'prop-types'
 
-const ArticleHeadingContainer = ({ id, src, title, published, preface, mainText, author }) => {
+const ArticleHeadingContainer = ({ id, src, title, published, author }) => {
   console.log('id in heading container: ' + id)
   const { savedArticles } = useSavedArticles()
 
@@ -30,3 +31,11 @@ const ArticleHeadingContainer = ({ id, src, title, published, preface, mainText,
 }
 
 export default ArticleHeadingContainer
+
+ArticleHeadingContainer.propTypes = {
+  id: PropTypes.number,
+  src: PropTypes.string,
+  title: PropTypes.string,
+  published: PropTypes.string,
+  author: PropTypes.string
+}
