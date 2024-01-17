@@ -8,7 +8,7 @@ const ArticlesList = () => {
   const [ filteredList, setFilteredList ] = useState(null)
 
  useEffect(() => {
-    fetch('/src/components/articleData.json')
+    fetch('/public/articleData.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');

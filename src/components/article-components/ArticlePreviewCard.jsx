@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom"
 
 
-const ArticlePreviewCard = ({ id, src, title, published, preface, mainText, author }) => {
-  const articles = { id, src, title, published, preface, mainText, author }
-
+const ArticlePreviewCard = ({ id, src, title, published }) => {
   return (
     <Link 
       to= {`/article/${id}`}
-      state={articles}
     >
       <div className="flex flex-col border-2 border-black">
         <div className=" overflow-hidden">
