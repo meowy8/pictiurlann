@@ -9,7 +9,7 @@ const ArticleHeadingContainer = ({ id, src, title, published, preface, mainText,
 
   return (
     <div id="article-header">
-      <div className='flex justify-between'>
+      <div className='flex justify-between pb-4'>
         <GoBackButton />
         {savedArticles.some(data => data.id === id) ?
           <UnsaveButton 

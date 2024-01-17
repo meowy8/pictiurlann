@@ -45,23 +45,25 @@ const ArticlesList = () => {
     <section className="w-full">
       <PageHeading>Articles</PageHeading>
       <ArticleSearch search={search} setSearch={setSearch} handleSearch={handleSearch} handleSortAsc={handleSortAsc}/>
-      <ul className="flex flex-col gap-4">
-        {filteredList && filteredList.map(article => {
-          return (
-          <li key={article.id}>
-            <ArticlePreviewCard 
-              title={article.title}
-              id={article.id}
-              author={article.author}
-              preface={article.preface}
-              src={article.src}
-              mainText={article.mainText}
-              published={article.published}
-            />
-          </li>
-          )
-        })}
-      </ul>
+      <div className="flex justify-center py-4">
+        <ul className="flex flex-col gap-4">
+          {filteredList && filteredList.map(article => {
+            return (
+            <li key={article.id}>
+              <ArticlePreviewCard 
+                title={article.title}
+                id={article.id}
+                author={article.author}
+                preface={article.preface}
+                src={article.src}
+                mainText={article.mainText}
+                published={article.published}
+              />
+            </li>
+            )
+          })}
+        </ul>
+      </div>
     </section>
   )
 }

@@ -9,7 +9,7 @@ function App() {
 
 
   return (
-    <div className="bg-[#15061c] min-w-screen min-h-screen text-white flex flex-col items-center font-mono">
+    <div className="bg-[#F4DFB6] min-w-screen min-h-screen text-white flex flex-col items-center font-mono">
       <AuthProvider>
         <BodyContainer>
           <NavBar />

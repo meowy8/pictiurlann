@@ -13,7 +13,7 @@ const SignIn = () => {
   }
 
   return (
-    <section className="w-full">
+    <section className="w-full text-[#030637]">
       <PageHeading>Sign In</PageHeading>
       <form type="submit" onSubmit={(e) => handleSignIn(e)} className="flex flex-col gap-4 py-8">
         <label htmlFor="username">

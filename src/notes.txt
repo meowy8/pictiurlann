@@ -1,8 +1,5 @@
-priority:
-
-
-
 fixes:
 - fix the search bar from updating with the previous value instead of the most recent value
 - fix list when you type so that the filtered list is still in the specific order and doesn't reset
 - fix articles so that when you type something and then delete what you typed the articles show up again and the page isnt blank
+- use queries to set the list order of asc desc so that it remembers what order it was when you click an article and go back

@@ -9,7 +9,7 @@ const SaveButton = ({ id, src, title, published, preface, mainText, author }) =>
   }
 
   return (
-    <button onClick={handleClick}>Save</button>
+    <button onClick={handleClick} className="hover:text-[#A1EEBD]">Save</button>
   )
 }
 

@@ -8,7 +8,7 @@ const UnsaveButton = ({ id }) => {
   }
 
   return (
-    <button onClick={handleClick}>Unsave</button>
+    <button onClick={handleClick} className="rounded-lg hover:text-red-600">Unsave</button>
   )
 }
 

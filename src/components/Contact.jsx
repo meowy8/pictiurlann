@@ -6,7 +6,7 @@ const Contact = () => {
   const [ formStatus, setFormStatus ] = useState('')
 
   return (
-    <section className="w-full">
+    <section className="w-full text-[#030637]">
       <PageHeading>Contact Info</PageHeading>
       <div className="flex flex-col gap-4 py-8">
         <div>
